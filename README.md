@@ -11,6 +11,7 @@ This plugin can graph:
 ---------------------
 Examples
 Create a symbolic link to glusterfs_<brick>_<open|readperf|writeperf>
+
        ln -s /usr/share/munin/plugins/glusterfs__ /etc/munin/plugins/glusterfs__open
            graph open calls for all bricks
  
@@ -21,12 +22,12 @@ Create a symbolic link to glusterfs_<brick>_<open|readperf|writeperf>
  
 Add the following to your /etc/munin/plugin-conf.d/munin-node:
  
- [glusterfs_*]
-   user root                   # Mandatory
-   env.volume <volume_name>    # Mandatory
-   env.share <share_name>      # Mandatory
-   env.blocksize <blocksize>   # Optional
-   env.blockcount <blockcount> # Optional
+    [glusterfs_*]
+     user root                   # Mandatory
+     env.volume <volume_name>    # Mandatory
+     env.share <share_name>      # Mandatory
+     env.blocksize <blocksize>   # Optional
+     env.blockcount <blockcount> # Optional
  
 ---------------------
 
